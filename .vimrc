@@ -10,6 +10,9 @@ if has('vim_starting')
   set rtp+=~/.vim/bundle/neobundle.vim/
   call neobundle#rc(expand('~/.bundle'))
 endif
+if finddir('go', '/usr/local') != ''
+    set rtp+=/usr/local/go/misc/vim
+endif
 
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'basyura/jslint.vim'
@@ -205,6 +208,10 @@ autocmd FileType javascript call s:javascript_filetype_settings()
 "----------------------------------------
 let g:quickrun_config = {}
 let g:quickrun_config.javascript = {'command' : 'node'}
+let g:quickrun_config.go = {
+\    'command': 'go',
+\    'exec': ['go run %s']
+\ }
 
 "---------------------------------------------------------------------------
 " vimfiler
