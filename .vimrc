@@ -30,7 +30,7 @@ endif
 "----------------------------------------
 set nobackup
 set writebackup
-set undofile
+set noundofile
 set undodir=.
 
 
