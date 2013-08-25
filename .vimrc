@@ -10,6 +10,7 @@ set ambiwidth=double
 set shellslash
 set wildmenu
 set mouse=ar
+set clipboard-=unnamed
 
 " 手軽に .vimrc を編集する
 nnoremap <Leader>ev :tabedit $MYVIMRC<CR>
