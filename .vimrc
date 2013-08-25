@@ -371,3 +371,5 @@ let g:airline_theme = 'wombat'
 
 NeoBundle 'w0ng/vim-hybrid'
 colorscheme hybrid
+
+filetype plugin indent on
