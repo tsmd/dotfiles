@@ -116,7 +116,6 @@ inoremap <S-CR> <Esc>O
 vnoremap X y/<C-R>"<CR>
 
 
-
 "========================================
 " その他
 "----------------------------------------
@@ -209,19 +208,7 @@ nnoremap gc  `[v`]
 
 " 簡単にカレントディレクトリを変更する
 "----------------------------------------
-command! -nargs=? -complete=dir -bang CD  call s:ChangeCurrentDir('<args>', '<bang>')
-function! s:ChangeCurrentDir(directory, bang)
-	if a:directory == ''
-		lcd %:p:h
-	else
-		execute 'lcd ' . a:directory
-	endif
-	if a:bang == ''
-		pwd
-	endif
-endfunction
-
-nnoremap <Leader>cd :<C-u>CD<CR>
+command! -nargs=0 CD :execute 'lcd ' . expand("%:p:h")
 
 
 "========================================
