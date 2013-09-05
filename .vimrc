@@ -11,6 +11,7 @@ set shellslash
 set wildmenu
 set mouse=ar
 set clipboard-=unnamed
+set autoread
 
 " 手軽に .vimrc を編集する
 nnoremap <Leader>ev :tabedit $MYVIMRC<CR>
@@ -291,9 +292,11 @@ NeoBundle 'othree/html5.vim'
 let g:quickrun_config.javascript = {'command' : 'node'}
 
 NeoBundle 'jelera/vim-javascript-syntax'
-let g:SimpleJsIndenter_CaseIndentLevel = -1
 
-NeoBundle 'jiangmiao/simple-javascript-indenter'
+"NeoBundle 'jiangmiao/simple-javascript-indenter'
+"let g:SimpleJsIndenter_CaseIndentLevel = -1
+
+"NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'nono/vim-handlebars'
 
 NeoBundle 'teramako/jscomplete-vim'
@@ -306,6 +309,7 @@ let g:jscomplete_use = ['dom']
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'airblade/vim-gitgutter'
 
+
 " ビルド
 "----------------------------------------
 NeoBundle 'thinca/vim-quickrun'
@@ -315,7 +319,7 @@ NeoBundle 'thinca/vim-quickrun'
 "----------------------------------------
 NeoBundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlP .'
 
 "NeoBundle 'scrooloose/nerdtree'
 
