@@ -70,6 +70,7 @@ set nrformats=hex
 syntax on
 set ruler
 set wrap
+set sidescrolloff=5
 set list
 set listchars=tab:\|\ ,extends:<,trail:-,nbsp:␣
 set showbreak=\ ↳\ 
