@@ -233,9 +233,9 @@ vnoremap <Leader>a= :Tabularize /=<CR>
 nnoremap <Leader>a: :Tabularize /:<CR>
 vnoremap <Leader>a: :Tabularize /:<CR>
 
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'kana/vim-textobj-indent'
-NeoBundle 'kana/vim-textobj-line'
+"NeoBundle 'kana/vim-textobj-user'
+"NeoBundle 'kana/vim-textobj-indent'
+"NeoBundle 'kana/vim-textobj-line'
 NeoBundle 'kana/vim-operator-user'
 
 NeoBundle 'kana/vim-operator-replace'
@@ -260,9 +260,8 @@ map R  <Plug>(operator-replace)
 ""vmap <C-d> <Plug>(textmanip-duplicate-down)
 
 NeoBundle 'thinca/vim-qfreplace'
-NeoBundle 'thinca/vim-textobj-comment'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tsaleh/vim-matchit'
+"NeoBundle 'thinca/vim-textobj-comment'
+"NeoBundle 'tpope/vim-surround'
 "NeoBundle 'tyru/operator-html-escape.vim'
 
 
@@ -273,7 +272,8 @@ NeoBundle 'scrooloose/nerdcommenter'
 nmap <C-l> <plug>NERDCommenterToggle
 vmap <C-l> <plug>NERDCommenterToggle
 
-NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'scrooloose/syntastic'
+NeoBundle 'thinca/vim-quickrun'
 
 
 " HTML, CSS
@@ -298,9 +298,9 @@ NeoBundle 'jelera/vim-javascript-syntax'
 "let g:SimpleJsIndenter_CaseIndentLevel = -1
 
 "NeoBundle 'marijnh/tern_for_vim'
-NeoBundle 'nono/vim-handlebars'
+"NeoBundle 'nono/vim-handlebars'
 
-NeoBundle 'teramako/jscomplete-vim'
+NeoBundle 'mattn/jscomplete-vim'
 autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
 let g:jscomplete_use = ['dom']
 
@@ -309,11 +309,6 @@ let g:jscomplete_use = ['dom']
 "----------------------------------------
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'airblade/vim-gitgutter'
-
-
-" ビルド
-"----------------------------------------
-NeoBundle 'thinca/vim-quickrun'
 
 
 " ユーティリティ
@@ -354,7 +349,7 @@ NeoBundle 'vim-scripts/sudo.vim'
 "command! Fifo :call Fifo()
 "command! FifoEnd :call FifoEnd()
 
-" Appearance
+" アピアランス
 "----------------------------------------
 NeoBundle 'bling/vim-airline'
 let g:airline_left_sep = ''
