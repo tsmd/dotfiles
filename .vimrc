@@ -72,8 +72,8 @@ set ruler
 set wrap
 set sidescrolloff=5
 set list
-set listchars=tab:\|\ ,extends:<,trail:-,nbsp:␣
-set showbreak=\ ↳\ 
+set listchars=tab:\|\ ,extends:<,trail:-
+"set showbreak=\ ?\ 
 set laststatus=2
 set cmdheight=1
 set showcmd
