@@ -12,12 +12,16 @@ set ignorecase
 set matchpairs=(:),{:},[:],<:>,（:）
 "number formats recognized for CTRL-A command
 set nrformats=hex
+"print the line number in front of each line
+set number
+"show the line number relative to the line with the cursor
+set relativenumber
 "lines to scroll with CTRL-U and CTRL-D
 set scroll=0
 "minimum number of lines to scroll
 set scrolljump=1
 "minimum nr. of lines above and below cursor
-set scrolloff=3
+set scrolloff=0
 "what type of selection to use
 set selection=inclusive
 "message on status line to show current mode
