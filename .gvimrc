@@ -14,10 +14,11 @@ endif
 " フォント
 "----------------------------------------
 if has('win32')
-	"set guifont=MS_Gothic:h12
-	set guifont=VL_Gothic:h12
-	set linespace=3
-	set renderoptions=type:directx,renmode:5
+	set guifont=Consolas:h12
+	set guifontwide=MS_Gothic:h12
+	"set guifont=VL_Gothic:h12
+	set linespace=2
+	set renderoptions=type:directx,renmode:0
 elseif has('gui_macvim')
 	set guifont=VL-Gothic-Regular:h16
 elseif has('mac')
