@@ -35,7 +35,7 @@ set smartcase
 "maximum number of changes that can be undone
 set undolevels
 "use visual bell instead of beeping
-set novisualbell
+set visualbell
 "searches wrap around the end of the file
 set wrapscan
 

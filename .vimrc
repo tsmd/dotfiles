@@ -259,7 +259,7 @@ map R  <Plug>(operator-replace)
 "" 行の複製
 ""vmap <C-d> <Plug>(textmanip-duplicate-down)
 
-NeoBundle 'thinca/vim-qfreplace'
+"NeoBundle 'thinca/vim-qfreplace'
 "NeoBundle 'thinca/vim-textobj-comment'
 "NeoBundle 'tpope/vim-surround'
 "NeoBundle 'tyru/operator-html-escape.vim'
@@ -269,11 +269,11 @@ NeoBundle 'thinca/vim-qfreplace'
 "----------------------------------------
 
 NeoBundle 'scrooloose/nerdcommenter'
-nmap <C-l> <plug>NERDCommenterToggle
+nmap <C-l> <plug>NERDCommenterToggle j
 vmap <C-l> <plug>NERDCommenterToggle
 
 "NeoBundle 'scrooloose/syntastic'
-NeoBundle 'thinca/vim-quickrun'
+"NeoBundle 'thinca/vim-quickrun'
 
 
 " HTML, CSS
@@ -300,14 +300,14 @@ NeoBundle 'jelera/vim-javascript-syntax'
 "NeoBundle 'marijnh/tern_for_vim'
 "NeoBundle 'nono/vim-handlebars'
 
-NeoBundle 'mattn/jscomplete-vim'
-autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
-let g:jscomplete_use = ['dom']
+"NeoBundle 'mattn/jscomplete-vim'
+"autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
+"let g:jscomplete_use = ['dom']
 
 
 " バージョン管理
 "----------------------------------------
-NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'airblade/vim-gitgutter'
 
 
