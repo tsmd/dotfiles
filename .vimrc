@@ -129,7 +129,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-let s:tabringcount = 0
+let s:tabringcount = 3
 let s:tabringdic = [
 \	{ "expandtab" : 0, "width" : 4 },
 \	{ "expandtab" : 0, "width" : 2 },
@@ -220,7 +220,9 @@ if has('vim_starting')
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 	set runtimepath+=~/vimfiles/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.bundle'))
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 let g:quickrun_config = {}
 
@@ -354,9 +356,13 @@ NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'bling/vim-airline'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'solarized'
 
-NeoBundle 'w0ng/vim-hybrid'
-colorscheme hybrid
+NeoBundle 'altercation/vim-colors-solarized'
+
+call neobundle#end()
 
 filetype plugin indent on
+
+NeoBundleCheck
+

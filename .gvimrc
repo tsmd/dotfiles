@@ -32,10 +32,12 @@ endif
 "========================================
 " 表示など
 "----------------------------------------
-set guioptions=
+"set guioptions=
 set columns=170
 set lines=50
-colorscheme hybrid
+
+colorscheme solarized
+set background=light
 
 if has('multi_byte_ime')
 	highlight CursorIM guibg=Purple guifg=NONE
