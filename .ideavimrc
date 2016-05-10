@@ -38,6 +38,10 @@ set undolevels
 set visualbell
 "searches wrap around the end of the file
 set wrapscan
+"use vim-surround
+set surround
+"use incremental search
+set incsearch
 
 nnoremap Y y$
 " jk で挿入モードを脱出
