@@ -15,7 +15,7 @@ set nrformats=hex
 "print the line number in front of each line
 set number
 "show the line number relative to the line with the cursor
-set relativenumber
+set norelativenumber
 "lines to scroll with CTRL-U and CTRL-D
 set scroll=0
 "minimum number of lines to scroll
@@ -42,6 +42,8 @@ set wrapscan
 set surround
 "use incremental search
 set incsearch
+"use multiple cursors
+set multiple-cursors
 
 nnoremap Y y$
 " jk で挿入モードを脱出
