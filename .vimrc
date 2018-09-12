@@ -1,5 +1,13 @@
 "vim:set fenc=utf-8 ts=4 sts=4 sw=4 noet:
 
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
 
 "========================================
 " 全般
@@ -216,153 +224,74 @@ command! -nargs=0 CD :execute 'lcd ' . expand("%:p:h")
 "========================================
 " プラグイン
 "----------------------------------------
-if has('vim_starting')
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
-	set runtimepath+=~/vimfiles/bundle/neobundle.vim/
-endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-let g:quickrun_config = {}
+call vundle#end()
 
 
 " テキスト編集
 "----------------------------------------
-NeoBundle 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'
 nnoremap <Leader>a= :Tabularize /=<CR>
 vnoremap <Leader>a= :Tabularize /=<CR>
 nnoremap <Leader>a: :Tabularize /:<CR>
 vnoremap <Leader>a: :Tabularize /:<CR>
 
-"NeoBundle 'kana/vim-textobj-user'
-"NeoBundle 'kana/vim-textobj-indent'
-"NeoBundle 'kana/vim-textobj-line'
-NeoBundle 'kana/vim-operator-user'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-operator-user'
 
-NeoBundle 'kana/vim-operator-replace'
+Plugin 'kana/vim-operator-replace'
 map R  <Plug>(operator-replace)
 
-"NeoBundle 'Shougo/neocomplcache'
-"let g:neocomplcache_enable_at_startup = 1
-"let g:neocomplcache_snippets_dir = $HOME.'/snippets'
-"imap <C-l> <Plug>(neocomplcache_snippets_expand)
-"smap <C-l> <Plug>(neocomplcache_snippets_expand)
-""noremap es :<C-u>NeoComplCacheEditSnippets<CR>
+Plugin 'thinca/vim-textobj-comment'
 
-"NeoBundle 'Shougo/neosnippet'
-
-"NeoBundle 't9md/vim-textmanip'
-"" 選択したテキストの移動
-"vmap <C-j> <Plug>(textmanip-move-down)
-"vmap <C-k> <Plug>(textmanip-move-up)
-"vmap <C-h> <Plug>(textmanip-move-left)
-"vmap <C-l> <Plug>(textmanip-move-right)
-"" 行の複製
-""vmap <C-d> <Plug>(textmanip-duplicate-down)
-
-"NeoBundle 'thinca/vim-qfreplace'
-"NeoBundle 'thinca/vim-textobj-comment'
-"NeoBundle 'tpope/vim-surround'
-"NeoBundle 'tyru/operator-html-escape.vim'
+Plugin 'tpope/vim-surround'
 
 
 " プログラミング支援
 "----------------------------------------
 
-NeoBundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 nmap <C-l> <plug>NERDCommenterToggle j
 vmap <C-l> <plug>NERDCommenterToggle
-
-"NeoBundle 'scrooloose/syntastic'
-"NeoBundle 'thinca/vim-quickrun'
 
 
 " HTML, CSS
 "----------------------------------------
-NeoBundle 'hail2u/vim-css3-syntax'
+Plugin 'hail2u/vim-css3-syntax'
 
-NeoBundle 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim'
 autocmd FileType css imap <tab> <plug>(EmmetExpandAbbr)
 let g:user_emmet_settings = { 'lang' : 'ja' }
 let g:use_emmet_complete_tag = 1
 
-NeoBundle 'othree/html5.vim'
-
 
 " JavaScript
 "----------------------------------------
-let g:quickrun_config.javascript = {'command' : 'node'}
-
-NeoBundle 'jelera/vim-javascript-syntax'
-
-"NeoBundle 'jiangmiao/simple-javascript-indenter'
-"let g:SimpleJsIndenter_CaseIndentLevel = -1
-
-"NeoBundle 'marijnh/tern_for_vim'
-"NeoBundle 'nono/vim-handlebars'
-
-"NeoBundle 'mattn/jscomplete-vim'
-"autocmd FileType javascript setlocal omnifunc=jscomplete#CompleteJS
-"let g:jscomplete_use = ['dom']
 
 
 " バージョン管理
 "----------------------------------------
-"NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 
 " ユーティリティ
 "----------------------------------------
-NeoBundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP .'
 
-"NeoBundle 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
 
-"NeoBundle 'Shougo/unite.vim'
-"" インサートモードで開始
-"let g:unite_enable_start_insert = 1
-"" 最近開いたファイル履歴の保存数
-"let g:unite_source_file_mru_limit = 50
-"" 垂直分割で開く
-"let g:unite_enable_split_vertically=1
-"" 開く
-"noremap <C-_> :Unite -buffer-name=files buffer file_mru bookmark file<CR>
-
-"NeoBundle 'Shougo/vimfiler'
-"let g:vimfiler_as_default_explorer = 1
-
-"NeoBundle 'Shougo/vimproc'
-"NeoBundle 'Shougo/vimshell'
-"NeoBundle 'sjl/gundo.vim'
-NeoBundle 'vim-scripts/sudo.vim'
-
-"NeoBundle 'vim-scripts/YankRing.vim'
-" YankRing FIFOモード
-"function! Fifo()
-	"YRClear
-	"nnoremap p pa
-"endfunc
-"function! FifoEnd()
-	"nnoremap p p
-"endfunc
-"command! Fifo :call Fifo()
-"command! FifoEnd :call FifoEnd()
 
 " アピアランス
 "----------------------------------------
-NeoBundle 'bling/vim-airline'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_theme = 'solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
-NeoBundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
+set background=light
+colorscheme solarized
 
-call neobundle#end()
+"call vundle#end()
 
 filetype plugin indent on
-
-NeoBundleCheck
-
