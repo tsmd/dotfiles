@@ -44,6 +44,8 @@ set surround
 set incsearch
 "use multiple cursors
 set multiple-cursors
+"use join via IDE
+set smartjoin
 
 nnoremap Y y$
 " jk で挿入モードを脱出
