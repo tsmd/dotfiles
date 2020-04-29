@@ -41,7 +41,11 @@ set wrapscan
 "use incremental search
 set incsearch
 "use join via IDE
-set smartjoin
+set ideajoin
+"when to start Select mode instead of Visual mode
+set selectmode=mouse,key,template,refactoring
+
+set keymodel=startsel,stopsel
 
 nnoremap Y y$
 " jk で挿入モードを脱出
