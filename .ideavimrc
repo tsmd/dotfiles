@@ -56,6 +56,8 @@ inoremap jk <ESC>
 vnoremap X y/<C-R>"<CR>
 " 最後に変更されたテキストを選択する
 nnoremap gc  `[v`]
+" 常に very magic を使う
+nmap / /\v
 
 "use easymotion
 set easymotion
@@ -79,3 +81,6 @@ set argtextobj
 
 "use textobj-entire
 set textobj-entire
+
+" use highlightedyank
+set highlightedyank
