@@ -82,5 +82,8 @@ set argtextobj
 "use textobj-entire
 set textobj-entire
 
-" use highlightedyank
+"use highlightedyank
 set highlightedyank
+
+"use matchit
+set matchit
