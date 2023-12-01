@@ -20,6 +20,8 @@ endif
 "========================================
 " 表示など
 "----------------------------------------
+colorscheme slate
+
 set guioptions-=i
 set guioptions-=m
 set guioptions-=T
